@@ -52,7 +52,7 @@ describe("Manager class", function () {
 
     manager.employees[0].work =  manager.employees[1].work = jasmine.createSpy("'work'");
     
-    manager.askEmployeesToWork();
+    manager.askEmployeesToWork(new Office());
     
     expect(manager.employees[0].work).toHaveBeenCalled();
     expect(manager.employees[1].work).toHaveBeenCalled();
